@@ -3,7 +3,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.0.RELEASE</version>
+  </parent>
   <groupId>com.sunflower.threadpool</groupId>
   <artifactId>sunflower-threadpool</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -11,6 +15,8 @@
   <properties>
     <guava.version>28.0-jre</guava.version>
     <lombok.verison>1.16.10</lombok.verison>
+    <commons-lang3.version>3.4</commons-lang3.version>
+    <commons-collections4.version>4.3</commons-collections4.version>
   </properties>
 
   <dependencies>
@@ -26,6 +32,24 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>${lombok.verison}</version>
+    </dependency>
+
+    <!-- log4j2 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons-lang3.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>${commons-collections4.version}</version>
     </dependency>
   </dependencies>
 
